@@ -1,0 +1,21 @@
+name: Pipeline Python
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Executar verificador de número par
+        run: python par.py
