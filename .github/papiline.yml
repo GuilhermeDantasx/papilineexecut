@@ -17,5 +17,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Executar verificador de número par
+      - name: Executar script Python
         run: python par.py
+
+      - name: Executar testes
+        run: python teste.py
